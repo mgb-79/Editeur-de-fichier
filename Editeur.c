@@ -17,12 +17,12 @@ void modifierFichier(char nom[],char contenu[]) {
     
  int main() {
     char nom[100],contenu[10000];
-    printf("Bienvenue dans cet éditeur de texte. Pour commencez veuillez choisir un nom :\n");
+    printf("Bienvenue dans cet éditeur de texte. Pour commencer, veuillez choisir un nom :\n");
     scanf("%s",nom);
     creerFichier(nom);
     printf("A présent, veuillez saisir le contenu désiré de votre fichier :\n");
-    scanf("%s",contenu);
+    scanf(" %[^\n]",contenu);
     modifierFichier(nom,contenu);
-    printf("Au revoir.\n")
+    printf("Au revoir.\n");
     return 0;
 }
